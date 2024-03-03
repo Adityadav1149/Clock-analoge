@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0049b7;
+
+}
+
+.container{
+    position: relative;
+    cursor: pointer;
+}
+
+.clock-box{
+    height: 95vmin;
+    width: 95vmin;
+    border-radius: 5rem;
+    border: 5px solid #fff685;
+    background-color: #00ddff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-box span{
+    transform: rotate(calc(30deg * var(--i)));
+    position: absolute;
+    inset: 0.5rem;
+    text-align: center;
+    color: #000;
+}
+
+.clock-box span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+.clock-box::before{
+    content: "";
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 4;
+    background-color: #000;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#second i{
+    width: 0.5rem;
+    height: 30vmin;
+    position: absolute;
+    background-color: #ff1d58;
+    border-radius: 1rem;
+    z-index: 3;
+}
+
+#minute i{
+    width: 0.6rem;
+    height: 35vmin;
+    position: absolute;
+    background-color: #f75990;
+    border-radius: 1rem;
+    z-index: 2;
+}
+
+#hour i{
+    width: 0.8rem;
+    height: 25vmin;
+    position: absolute;
+    background-color: #0049b7;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+
+
